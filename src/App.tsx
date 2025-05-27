@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Aside from './components/aside';
+import { MainContext, Context } from './context';
+import Main from './components/main';
+import Header from './components/header';
+import Footer from './components/footer';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
+function App() {
+  const [searchData, setSearchData]=useState([])
+  return (
+    <Context.Provider value={{searchData,setSearchData}}>
+    <div className="app">
+      <Header />
+      <Aside />
+      <MainContext.Provider value={{ searchData }}>
+        <Main />
+      </MainContext.Provider>
+      <Footer/>
+    </div>
+    </Context.Provider>
+  );
+}
+export default App;
