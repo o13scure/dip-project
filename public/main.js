@@ -1,4 +1,4 @@
-const KEY = "a15921d44a0fcd14ba611ad341dbf3d6";
+const KEY = "bf2a74ba0a6bfde419e5f3a97e884013";
 const MAIN_URL = `https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=edm&api_key=a15921d44a0fcd14ba611ad341dbf3d6&format=json`;
 const ERR = "Данные по запросу не найдены"
 
